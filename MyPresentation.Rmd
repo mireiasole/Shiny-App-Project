@@ -1,0 +1,43 @@
+---
+title: "My ShinyApp"
+author: "Mireia"
+date: "2024-02-16"
+output:
+  ioslides_presentation: default
+  slidy_presentation: default
+---
+
+
+## Application Overview 
+
+This ShinyApp has the purpose of helping you visualize the changes in wind and temperature in New York through the months of May to September in 1973.
+
+You may input the month and day you want to look at and the application will plot the daily measurements for you, calculate the mean values for that month and show you the correlation between wind and temperature values for that month.
+
+
+## Dataset used
+
+<font size="4">For this app, we are using the airquality dataset from R. We are focusing only on the temporal variables (Month and Day) and the Wind and Temperature variables.</font>
+
+```{r echo = FALSE}
+summary(airquality)
+```
+
+## Application and code
+
+This is the link to access the ShinyApp:
+
+https://miresol.shinyapps.io/WindTemp/
+
+This is the link of the github repo where the code for this presentation and the app are stored:
+
+https://github.com/mireiasole/Shiny-App-Project
+
+
+## Further applications
+
+<font size="4">This app can be modified to visualize data from other databases that have information on air quality measures for other places and times, as well as plot other variables such as ozone measures and analyze their relationships and interactions.</font>
+
+```{r cars, echo = FALSE}
+with(airquality, boxplot(Temp ~ Month, col = c(1,2,3,4,5)))
+```
